@@ -1,0 +1,16 @@
+{
+  "name": "profile",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "Venen Jean",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "sass": "^1.66.1"
+  }
+}
