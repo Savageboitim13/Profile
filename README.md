@@ -10,3 +10,7 @@ Run `npm install` in your CLI to install all dev-dependencies.
 
 ### Sheets
 - [ ] In progress...
+
+
+## Current State
+![StateOfWebsite](./src/img/state-of-work.png)
