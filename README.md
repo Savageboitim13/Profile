@@ -13,4 +13,4 @@ Run `npm install` in your CLI to install all dev-dependencies.
 
 
 ## Current State
-![StateOfWebsite](./src/img/state-of-work.png)
+![StateOfWebsite]("https://venenjean.netlify.app/")
