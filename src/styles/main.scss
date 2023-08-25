@@ -10,26 +10,19 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr;
 
-    height: 100vh;
-
     min-width: 100vw;
     min-height: 100vh;
-}
 
-#wrapper-1 {
-    background-color: aqua;
-    border: 50px;
+    overflow: hidden scroll;
 }
 
 #biography {
     display: grid;
     min-height: 100%;
-    padding: 1em;
     grid-template-rows: 2fr 1fr 1fr;
 
     .profile {
         grid-row: 0/1;
-        background-color: aliceblue;
         
         &-img {
             width: 315px;
@@ -51,17 +44,21 @@ body {
 
     .information {
         grid-row: 2/3;
-        background-color: bisque;
     }
 
     .social {
-        background-color: burlywood;
         justify-content: space-evenly;
 
         .icon {
             width: 100px;
             height: 100px;
             object-fit: contain;
+
+            transition: all .3s ease-out;
+        }
+
+        .icon:hover {
+            transform: translateY(-7px);
         }
     }
 }
@@ -76,17 +73,14 @@ body {
         grid-template-columns: 1fr;
         width: 100%;
 
-        .programming {
-            background-color: antiquewhite;
-        }
-
-        .website {
-            background-color: violet;
-        }
-
         .programming, .website {
             width: 100%;
             height: 100%;
+            
+            h2 {
+                font-size: 4ch;
+                font-weight: bold;
+            }
         }
 
         .container {
