@@ -21,6 +21,12 @@
 
 body {
     background: url("../img/Background/Aurora.jpg") center no-repeat;
+    // background: url("../img/Background/Mountains.jpg") center no-repeat;
+    // background: url("../img/Background/Nature.jpg") center no-repeat;
+    // background: url("../img/Background/Secret.jpg") center no-repeat;
+    // background: url("../img/Background/Stars.webp") center no-repeat;
+
+    color: whitesmoke;
     background-size: cover;
 
     display: grid;
@@ -66,9 +72,10 @@ body {
         justify-content: space-evenly;
 
         .icon {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             object-fit: contain;
+            filter: brightness(0) invert(1);
 
             transition: all .3s ease-out;
         }
