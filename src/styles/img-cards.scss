@@ -7,7 +7,7 @@
     left: 0px;
     
     width: 200px;
-    height: 260px;
+    height: 250px;
     object-fit: cover;
     border-radius: 20px;
 
@@ -25,4 +25,11 @@
 
 .card:hover ~ .card {
     left: 50px
+}
+
+.image-link {
+    display: inline-block;
+    background-image: url('../img/img-not-available.png');
+    background-size: cover;
+    background-position: center;
 }
