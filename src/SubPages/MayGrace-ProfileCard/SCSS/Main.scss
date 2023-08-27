@@ -1,0 +1,230 @@
+/* ! Don't forget making all items undraggable at the end!!! */
+:root {
+    font-size: 16px;
+    /* font-size: 62.5%; */
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #353535;
+    opacity: .5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 2em;
+
+    color: rgb(223, 223, 223);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+
+    object-fit: cover;
+    overflow: hidden scroll;
+}
+
+body:before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: url("../Images/PlanetaChetos.jpg") center/cover no-repeat;
+    animation: backgroundZoom 10s backwards;
+}
+
+@keyframes backgroundZoom {
+    from {
+        transform: scale(1.2)
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/** Center utilities */
+.center-col,
+.center-row {
+    display: flex;
+    flex-direction: var(--flex-direction);
+    align-items: center;
+    justify-content: center;
+}
+
+.center-col {
+    --flex-direction: column;
+}
+
+.center-row {
+    --flex-direction: row;
+}
+
+.profile-card {
+    display: grid;
+    grid-template-rows: 6fr 1fr 2fr 1fr;
+    column-gap: 2em;
+    margin: auto;
+    box-shadow: 0 18px 200px -60px black;
+    backdrop-filter: blur(15px);
+    border-radius: 50px;
+
+    border: 2px solid #030f2930;
+    padding: 3em 5em;
+}
+
+.profile-img {
+    width: 315px;
+    height: 315px;
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 5px 0;
+}
+
+.profile div {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.social {
+    gap: 5px;
+}
+
+svg {
+    width: 128px;
+    height: auto;
+    padding: 1em 1.15em;
+    border-radius: 35px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* SVG functionality */
+#pinterest {
+    --initial-bg-color: rgba(150, 0, 0, 0.5);
+    --hover-bg-color: rgb(150, 2, 2);
+}
+
+#deviantart {
+    --initial-bg-color: rgba(0, 150, 0, 0.5);
+    --hover-bg-color: rgb(0, 150, 0);
+}
+
+#pinterest,
+#deviantart {
+    background-color: var(--initial-bg-color);
+    transition: all .3s ease-in-out;
+}
+
+#pinterest:hover,
+#deviantart:hover {
+    background-color: var(--hover-bg-color);
+    transform: translateY(-5px);
+}
+
+.ref {
+    column-gap: 5px;
+}
+
+.ref-img {
+    width: 128px;
+    height: 128px;
+    border-radius: 35%;
+    object-fit: cover;
+}
+
+.contact {
+    gap: 8px;
+}
+
+
+/* CSS for contact buttons */
+.button-17 {
+    align-items: center;
+    appearance: none;
+    background-color: #c259cf;
+    border-radius: 24px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #60185d;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 8em;
+    will-change: transform, opacity;
+    z-index: 0;
+}
+
+.button-17:before {
+    border-radius: 24px;
+    animation: opacityFallbackOut .5s step-end forwards;
+    backface-visibility: hidden;
+    background-color: #EBEBEB;
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateZ(0);
+    transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+    width: 100%;
+}
+
+.button-17:hover:before {
+    animation: opacityFallbackIn 0s step-start forwards;
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.button-17:after {
+    background-color: #FFFFFF;
+}
+
+.button-17 span {
+    z-index: 1;
+    position: relative;
+}
