@@ -1,0 +1,18 @@
+// Scrollbar styling
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #353535;
+    opacity: .5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}

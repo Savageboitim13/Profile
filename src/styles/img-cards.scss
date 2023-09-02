@@ -12,7 +12,6 @@
     border-radius: 20px;
 
     transition: all .3s ease-in-out;
-
 }
 
 .card:not(:first-child) {
@@ -25,6 +24,13 @@
 
 .card:hover ~ .card {
     left: 50px
+}
+
+.profile-card {
+    display: inline-block;
+    background-image: url('../img/Card-Images/Profile-Card-May-Grace.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .image-link {

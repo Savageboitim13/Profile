@@ -1,0 +1,23 @@
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas: 
+        ". . ."
+        ". pc ."
+        ". . .";
+}
+
+.profile-card {
+    max-width: 80rem;
+    grid-area: pc;
+    gap: 2rem;
+}
+
+
+.social, .ref, .contact {
+    gap: .7rem;
+}
