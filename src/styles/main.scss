@@ -1,40 +1,38 @@
 @use 'blur.scss';
-@use 'center.scss';
-@use 'polaroid.scss';
 @use 'img-cards.scss';
+@use '../SubPages/MayGrace-ProfileCard/SCSS/center-utilities.scss';
+
+$github: #171515;
+
+$discord-blue: #5865F2;
+$discord-white: #F5F5F5;
+$discord-black: #050505;
+
+$gmai-blue: #4285F4;
+$gmai-red: #C5221F;
+$gmai-orange: #ff4838; // Modified Orig. EA4335
+$gmai-yellow: #FBBC04;
+$gmai-green: #34A853;
 
 :root {
-    $github: #171515;
-
-    $discord-blue: #5865F2;
-    $discord-white: #F5F5F5;
-    $discord-black: #050505;
-
-    $gmai-blue: #4285F4;
-    $gmai-red: #C5221F;
-    $gmai-red-bright: #EA4335;
-    $gmai-yellow: #FBBC04;
-    $gmai-green: #34A853;
-    font-size: 16px;
-    /* font-size: 62.5%; */
+    font-size: 62.5%;
 }
 
 body {
-    background: url("../img/Background/Aurora.jpg") center no-repeat;
-    // background: url("../img/Background/Mountains.jpg") center no-repeat;
-    // background: url("../img/Background/Nature.jpg") center no-repeat;
-    // background: url("../img/Background/Secret.jpg") center no-repeat;
-    // background: url("../img/Background/Stars.webp") center no-repeat;
-
-    color: whitesmoke;
-    background-size: cover;
-
     display: grid;
     grid-template-columns: 1fr 2fr;
 
     min-width: 100vw;
     min-height: 100vh;
 
+    background: url("../img/Background/Aurora.jpg") center no-repeat;
+    // background: url("../img/Background/Mountains.jpg") center no-repeat;
+    // background: url("../img/Background/Nature.jpg") center no-repeat;
+    // background: url("../img/Background/Secret.jpg") center no-repeat;
+    // background: url("../img/Background/Stars.webp") center no-repeat;
+    color: whitesmoke;
+    font-size: 1.6rem;
+    background-size: cover;
     overflow: hidden auto;
 }
 
@@ -67,28 +65,52 @@ body {
         grid-row: 2/3;
     }
 
+    // Working "on-hover" effect
     .social {
         grid-row: 3/4;
         justify-content: space-evenly;
 
         .icon {
-            width: 80px;
-            height: 80px;
+            // Icon refinement
+            padding: 2.5rem;
+            border-radius: 50%;
+
+            width: 15rem;
+            height: 15rem;
             object-fit: contain;
-            filter: brightness(0) invert(1);
 
             transition: all .3s ease-out;
         }
 
-        .icon:hover {
+        .gmail {
+            filter: brightness(0) invert(1);
+        }
+        
+        .github:hover, .discord:hover, .gmail:hover {
             transform: translateY(-7px);
+            transition: all .5s ease;
+        }
+
+        .github:hover {
+            background-color: $github;
+            filter: none;
+        }
+
+        .discord:hover {
+            background-color: $discord-blue;
+            filter: none;
+        }
+
+        .gmail:hover {
+            background-color: $gmai-orange;
+            filter: none;
         }
     }
 }
 
 .content {
     display: grid;
-    grid-template-rows: 1fr 0.05fr;
+    grid-template-rows: 1fr;
 
     #projects {
         display: grid;
@@ -101,9 +123,9 @@ body {
             padding: 2.9em;
 
             h2 {
-                font-size: 4ch;
+                font-size: 4rem;
                 font-weight: bold;
-                margin-bottom: 0.35em;
+                margin-bottom: 4rem;
             }
         }
     }
