@@ -72,11 +72,11 @@ svg {
     height: auto;
 
     padding: 2rem;
-    border-radius: 50px;
 }
 
 a {
     text-decoration: none;
+    border-radius: 50px;
 }
 
 .ref-img {
@@ -87,22 +87,22 @@ a {
 }
 
 /* SVG functionality */
-#pinterest {
+.pinterest {
     background-color: rgba(150, 0, 0, 0.5);
     transition: all .3s ease-in-out;
 }
 
-#deviantart {
+.deviantart {
     background-color: rgba(0, 150, 0, 0.5);
     transition: all .3s ease-in-out;
 }
 
-#pinterest:hover {
+.pinterest:hover {
     background-color: rgba(150, 2, 2, .69);
     transform: translateY(-5px);
 }
 
-#deviantart:hover {
+.deviantart:hover {
     background-color: rgba(2, 150, 2, .6);
     transform: translateY(-5px);
 }
