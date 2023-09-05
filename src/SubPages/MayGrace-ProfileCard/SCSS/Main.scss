@@ -88,23 +88,21 @@ a {
 
 /* SVG functionality */
 #pinterest {
-    --initial-bg-color: rgba(150, 0, 0, 0.5);
-    --hover-bg-color: rgba(150, 2, 2, .69);
-}
-
-#deviantart {
-    --initial-bg-color: rgba(0, 150, 0, 0.5);
-    --hover-bg-color: rgba(2, 150, 2, .6);
-}
-
-#pinterest,
-#deviantart {
-    background-color: var(--initial-bg-color);
+    background-color: rgba(150, 0, 0, 0.5);
     transition: all .3s ease-in-out;
 }
 
-#pinterest:hover,
+#deviantart {
+    background-color: rgba(0, 150, 0, 0.5);
+    transition: all .3s ease-in-out;
+}
+
+#pinterest:hover {
+    background-color: rgba(150, 2, 2, .69);
+    transform: translateY(-5px);
+}
+
 #deviantart:hover {
-    background-color: var(--hover-bg-color);
+    background-color: rgba(2, 150, 2, .6);
     transform: translateY(-5px);
 }
