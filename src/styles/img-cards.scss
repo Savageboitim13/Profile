@@ -4,10 +4,10 @@
 
 .card {
     position: relative;
-    left: 0px;
+    left: 0rem;
     
-    width: 200px;
-    height: 250px;
+    width: 20rem;
+    height: 25rem;
     object-fit: cover;
     border-radius: 20px;
 
@@ -15,15 +15,15 @@
 }
 
 .card:not(:first-child) {
-    margin-left: -50px;
+    margin-left: -5rem;
 }
 
 .card:hover {
-    transform: translateY(-20px);
+    transform: translateY(-2rem);
 }
 
 .card:hover ~ .card {
-    left: 50px
+    left: 5rem
 }
 
 .profile-card {
