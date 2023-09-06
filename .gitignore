@@ -4,8 +4,5 @@ node_modules
 # Ignore parcel's cache folder
 .parcel-cache
 
-# Ignores the package-lock.json
-package-lock.json
-
 # Ignores the dist folder with compiled files
 dist
