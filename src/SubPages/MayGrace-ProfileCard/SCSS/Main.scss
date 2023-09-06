@@ -1,9 +1,9 @@
 /* ! Don't forget making all items undraggable at the end!!! */
-@use 'center-utilities.scss';
-@use 'undraggable.scss';
-@use 'grid-layout.scss';
-@use 'scrollbar.scss';
-@use 'button.scss';
+@use './center-utilities.scss';
+@use './undraggable.scss';
+@use './grid-layout.scss';
+@use './scrollbar.scss';
+@use './button.scss';
 
 :root {
     font-size: 62.5%;
